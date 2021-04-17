@@ -14,9 +14,10 @@ export interface Props {
     mode: any;
     courseType?: string;
     isScroll?: boolean;
+    isPricingPage?: boolean;
 }
 
-export default function RightMenu({ mode, courseType }: Props) {
+export default function RightMenu({ mode, courseType, isPricingPage = false }: Props) {
     const [visible, showModal] = useState(false);
     const [showSignup, setShowSignup] = useState<boolean | undefined>(false);
     const [visible123, showModal123] = useState(false);
@@ -65,6 +66,7 @@ export default function RightMenu({ mode, courseType }: Props) {
     return (
         <>
             <Menu
+                data-is-pricing={isPricingPage}
                 mode={mode}
                 className="header-menu"
                 style={{
@@ -75,6 +77,14 @@ export default function RightMenu({ mode, courseType }: Props) {
                     <ActiveLink
                         children={`How It Works`}
                         href="/how-it-works"
+                        className={mode === 'horizontal' && immersiveMenuItem}
+                        
+                    />
+                </Menu.Item>
+                <Menu.Item>
+                    <ActiveLink
+                        children={`Pricing`}
+                        href="/pricing"
                         className={mode === 'horizontal' && immersiveMenuItem}
                     />
                 </Menu.Item>
