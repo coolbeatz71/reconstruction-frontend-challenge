@@ -641,7 +641,7 @@
 
 [data-is-pricing='true'] {
     .immersive-menu-item {
-        color: @primary !important;
+        color: @primaryLight !important;
 
         .ant-menu-submenu-title:hover {
             color: @white !important;
@@ -649,16 +649,26 @@
     }
 
     .immersive-sub-menu {
-        color: @primary !important;
+        color: @primaryLight !important;
 
         .ant-menu-submenu-title {
             &:hover {
                 span {
                     color: @white !important;
+                    svg {
+                        path {
+                            fill: @white !important;
+                        }
+                    }
                 }
             }
             span {
-                color: @primary !important;
+                color: @primaryLight !important;
+                svg {
+                    path {
+                        fill: @primaryLight !important;
+                    }
+                }
             }
         }
     }
@@ -670,7 +680,7 @@
     .nav__button {
         .immersive-menu::after,
         .immersive-menu::before {
-            background-color: @primary !important;
+            background-color: @primaryLight !important;
         }
     }
 }
