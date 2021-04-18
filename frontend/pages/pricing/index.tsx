@@ -1,5 +1,6 @@
-import MainLayout from '@components/layout/MainLayout';
 import React, { FC } from 'react';
+import MainLayout from '@components/layout/MainLayout';
+import TopSection from '@components/pricing/topSection';
 
 const Pricing: FC<{}> = () => {
     return (
@@ -10,7 +11,7 @@ const Pricing: FC<{}> = () => {
             courseType="immersive"
         >
             <div className="container">
-                
+                <TopSection />
             </div>
         </MainLayout>
     );

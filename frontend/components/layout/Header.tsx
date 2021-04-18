@@ -103,7 +103,7 @@ export function Header({ courseType }: Props) {
                                 {windowDimensions.width > 991 ? (
                                     <RightMenu mode="horizontal" isPricingPage={isPricingPage}  courseType={courseType} isScroll={isScroll} />
                                 ) : (
-                                    <div className="nav-wrapper" id="nav__wrapper">
+                                    <div className="nav-wrapper" id="nav__wrapper" data-is-pricing={isPricingPage}>
                                         <input
                                             type="checkbox"
                                             className="nav__checkbox"
@@ -118,7 +118,7 @@ export function Header({ courseType }: Props) {
                                                 'vertical-style'
                                             } `}
                                         >
-                                            <span className={`nav__icon ${immersiveMenu}`}></span>
+                                            <span  className={`nav__icon ${immersiveMenu}`}></span>
                                         </label>
                                         <div className="nav__background">
                                             <nav className="nav__menu">

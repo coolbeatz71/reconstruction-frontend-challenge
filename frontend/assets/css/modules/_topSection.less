@@ -1,0 +1,42 @@
+.topSection__wrapper {
+    padding-top: calc(32px + @banner-height);
+    position: relative;
+    overflow: hidden;
+
+    &__left {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+
+        p {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__bottom {
+        margin: 4rem auto;
+
+        h2 {
+            font-size: 45px;
+        }
+
+        .ant-typography {
+            color: @primary;
+            padding: 2rem 19%;
+            text-align: center;
+        }
+    }
+
+    .topSection__cta {
+        &__arrow {
+            position: absolute;
+            margin-left: 1em;
+
+            &::after {
+                font-size: 20pt;
+                margin-left: 3rem;
+                content: '\2193';
+            }
+        }
+    }
+}

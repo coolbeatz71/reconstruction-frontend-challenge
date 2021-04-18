@@ -1,44 +1,38 @@
-import { Col, Row, Typography } from "antd";
-import React, { FC } from "react";
-import Link from "next/link";
+import { Col, Row, Typography } from 'antd';
+import React, { FC } from 'react';
+import Link from 'next/link';
 
-const { Title } = Typography;
+const { Title, Paragraph } = Typography;
 
-const topSection: FC<{}> = () => {
+const TopSection: FC<{}> = () => {
     return (
-        <div className="hero__wrapper">
-            <div className="container">
-                <div className="hero__wrapper__content center">
-                    <Row>
-                        <Col span={24}>
-                            <Title level={1}>Unapologetically Black Education</Title>
-                            <p>Personal, world-class education at home for $10 per session</p>
-                            <Link href="/courses">
-                                <button className="hero___cta button-primary-l" style={{ width: '284px' }}>
-                                    Find a Class
-                                    <span className="hero__cta__arrow"></span>
-                                </button>
-                            </Link>
-                        </Col>
-                    </Row>
-                </div>
-                <div className="hero__image__outer__bg">
-                    <picture>
-                        <source media="(max-width: 574px)" srcSet="/hero-bg-mobile-new.png" />
-                        <source media="(min-width: 575px)" srcSet="/hero-bg-new.png" />
-                        <img alt="Unapologetically Black Education" src="/hero-bg-new.png" />
-                    </picture>
-                </div>
-                <div className="hero__image__wrapper">
-                    <picture>
-                        <source media="(max-width: 574px)" srcSet="/hero-image-mobile-new2.png" />
-                        <source media="(min-width: 575px)" srcSet="/hero-image-new.png" />
-                        <img alt="Unapologetically Black Education" src="/hero-image-new.png" />
-                    </picture>
-                </div>
-            </div>
+        <div className="topSection__wrapper">
+            <Row>
+                <Col span={12} className="topSection__wrapper__left">
+                    <Title level={2}>For Shorties</Title>
+                    <p>5-10 years old</p>
+                    <Link href="/courses">
+                        <button className="topSection___cta button-primary-l" style={{ width: '284px' }}>
+                            Find a Class
+                            <span className="topSection__cta__arrow"></span>
+                        </button>
+                    </Link>
+                </Col>
+                <Col span={12}>
+                    <img src="pricing-bulb.svg" alt="pricing bulb" />
+                </Col>
+            </Row>
+            <Row align="middle" justify="center" className="topSection__wrapper__bottom">
+                <Title level={2}>The Come up</Title>
+                <Paragraph>
+                    Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac
+                    consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Donec
+                    ullamcorper nulla non metus auctor fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Maecenas sed diam eget risus varius blandit sit amet non magna.
+                </Paragraph>
+            </Row>
         </div>
     );
 };
 
-export default topSection;
+export default TopSection;
