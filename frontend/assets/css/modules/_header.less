@@ -639,6 +639,42 @@
     }
 }
 
+[data-is-pricing='true'] {
+    .immersive-menu-item {
+        color: @primary !important;
+
+        .ant-menu-submenu-title:hover {
+            color: @white !important;
+        }
+    }
+
+    .immersive-sub-menu {
+        color: @primary !important;
+
+        .ant-menu-submenu-title {
+            &:hover {
+                span {
+                    color: @white !important;
+                }
+            }
+            span {
+                color: @primary !important;
+            }
+        }
+    }
+
+    .immersive-menu-item:hover {
+        color: @white !important;
+    }
+
+    .nav__button {
+        .immersive-menu::after,
+        .immersive-menu::before {
+            background-color: @primary !important;
+        }
+    }
+}
+
 .immersive-menu-item {
     color: @white !important;
     border-radius: 12px;

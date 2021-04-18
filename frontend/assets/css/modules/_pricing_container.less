@@ -1,0 +1,57 @@
+.container__wrapper {
+    padding: 3rem;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-flow: column;
+    background: @white;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    box-shadow: 0px 4px 44px rgba(249, 214, 224, 0.3);
+
+    [class~='ant-divider'] {
+        margin-top: 12px;
+        margin-bottom: 32px;
+    }
+
+    &__title {
+        width: 45%;
+        font-size: 13px;
+        font-weight: 400;
+        overflow-wrap: break-word;
+
+        .ant-typography {
+            color: @primary;
+        }
+    }
+
+    .slick-dots {
+        .slick-active {
+            width: 16px !important;
+            button {
+                width: 12px;
+                margin: 0;
+                background: @primary !important;
+            }
+        }
+        li button {
+            height: 12px;
+            width: 12px;
+            border-radius: 80rem;
+            border: 1px solid @primary;
+            color: @white !important;
+            background: @white !important;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        &__title {
+            width: 55%;
+        }
+    }
+
+    @media only screen and (max-width: 576px) {
+        &__title {
+            width: 100%;
+        }
+    }
+}

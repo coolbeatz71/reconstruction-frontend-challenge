@@ -1,0 +1,61 @@
+.card__wrapper {
+    .ant-card-bordered {
+        border: 1px solid @primary !important;
+        border-radius: 12px;
+
+        .ant-card-head {
+            height: 16.5rem;
+            border-bottom: 1px solid @primary;
+        }
+    }
+
+    &__header {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        height: 13rem;
+        &__title {
+            font-size: 12px;
+            color: @BrandTertiary;
+            text-transform: uppercase;
+        }
+
+        &__subTitle {
+            white-space: pre-wrap;
+            color: @primary !important;
+            margin: 0 !important;
+            font-size: 20px !important;
+            font-weight: 400 !important;
+        }
+
+        &__grade {
+            display: flex;
+            color: @primary !important;
+            font-size: 16px !important;
+            font-weight: 400 !important;
+        }
+    }
+
+    .ant-card-body {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+
+        .ant-typography {
+            word-break: normal;
+            color: @primary;
+        }
+    }
+}
+
+.card__cta {
+    &__arrow {
+        position: absolute;
+        margin-left: 1em;
+
+        &::after {
+            content: '\27F6';
+        }
+    }
+}
