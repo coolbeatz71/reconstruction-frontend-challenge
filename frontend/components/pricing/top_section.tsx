@@ -12,7 +12,7 @@ const TopSection: FC<{}> = () => {
                     <Title level={2}>For Shorties</Title>
                     <p>5-10 years old</p>
                     <Link href="/courses">
-                        <button className="topSection___cta button-primary-l" style={{ width: '284px' }}>
+                        <button className="topSection___cta button-primary-l" style={{ width: '240px' }}>
                             Find a Class
                             <span className="topSection__cta__arrow"></span>
                         </button>
