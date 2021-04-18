@@ -1,10 +1,9 @@
-import { Col, Layout, Row } from "antd";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
-import useWindowDimensions from "../../hooks/windowSize";
-import RightMenu from "./Menu";
-
+import { Col, Layout, Row } from 'antd';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import React, { useEffect, useState } from 'react';
+import useWindowDimensions from '../../hooks/windowSize';
+import RightMenu from './Menu';
 
 export interface Props {
     courseType?: string;
@@ -15,7 +14,7 @@ export function Header({ courseType }: Props) {
     const [checked, setChecked] = useState(false);
     const [verticalStyle, setVerticalStyle] = useState(false);
     const immersiveMenu = isScroll === false && courseType === 'immersive' && 'immersive-menu';
-    
+
     useEffect(function mount() {
         function onScroll() {
             // 95 is header height
@@ -28,15 +27,15 @@ export function Header({ courseType }: Props) {
             window.removeEventListener('load', onScroll);
         };
     });
-    
+
     const windowDimensions = useWindowDimensions();
     const router = useRouter();
     const isPricingPage = router.pathname === '/pricing';
     let bgColor = '#FFF8FA';
-    
+
     if (router.pathname === '/') bgColor = '#894EFF';
     if (isScroll) bgColor = '#FFF';
-    if(isScroll || isPricingPage) bgColor = '#FFF8FA';
+    if (isScroll || isPricingPage) bgColor = '#FFF8FA';
 
     function handleCheck() {
         setVerticalStyle(!verticalStyle);
@@ -56,7 +55,6 @@ export function Header({ courseType }: Props) {
             className={isScroll ? 'header-scroll' : null}
             style={{
                 position: 'fixed',
-                top: '0',
                 zIndex: 99,
                 width: '100%',
                 background: bgColor,
@@ -81,7 +79,10 @@ export function Header({ courseType }: Props) {
                             >
                                 <Link href="/">
                                     <a className="default-logo" aria-label="Reconstruction">
-                                        <img src={isPricingPage ? "/scrolled-logo.svg": "/logo.svg"} alt="Reconstruction" />
+                                        <img
+                                            src={isPricingPage ? '/scrolled-logo.svg' : '/logo.svg'}
+                                            alt="Reconstruction"
+                                        />
                                     </a>
                                 </Link>
                                 <Link href="/">
@@ -101,7 +102,12 @@ export function Header({ courseType }: Props) {
                         {windowDimensions.width && (
                             <Col lg={18} md={12} sm={12} xs={8} className="menuWrapper" style={{ display: 'none' }}>
                                 {windowDimensions.width > 991 ? (
-                                    <RightMenu mode="horizontal" isPricingPage={isPricingPage}  courseType={courseType} isScroll={isScroll} />
+                                    <RightMenu
+                                        mode="horizontal"
+                                        isPricingPage={isPricingPage}
+                                        courseType={courseType}
+                                        isScroll={isScroll}
+                                    />
                                 ) : (
                                     <div className="nav-wrapper" id="nav__wrapper" data-is-pricing={isPricingPage}>
                                         <input
@@ -118,7 +124,7 @@ export function Header({ courseType }: Props) {
                                                 'vertical-style'
                                             } `}
                                         >
-                                            <span  className={`nav__icon ${immersiveMenu}`}></span>
+                                            <span className={`nav__icon ${immersiveMenu}`}></span>
                                         </label>
                                         <div className="nav__background">
                                             <nav className="nav__menu">
@@ -138,7 +144,12 @@ export function Header({ courseType }: Props) {
                                                         </Link>
                                                     </div>
                                                 </Col>
-                                                <RightMenu mode="inline" isPricingPage={isPricingPage} courseType={courseType} isScroll={isScroll} />
+                                                <RightMenu
+                                                    mode="inline"
+                                                    isPricingPage={isPricingPage}
+                                                    courseType={courseType}
+                                                    isScroll={isScroll}
+                                                />
                                             </nav>
                                         </div>
                                     </div>
