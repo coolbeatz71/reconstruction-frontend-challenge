@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Card, Typography } from 'antd';
 
-const { Text, Title, Paragraph } = Typography;
+const { Text, Paragraph } = Typography;
 
 interface IProps {
     title: string;

@@ -35,11 +35,13 @@ const Pricing: FC<{}> = () => {
         >
             <div className="container">
                 <TopSection />
-
+            </div>
+            <div className="container">
                 {courses.map((el, i) => (
                     <Container title={el.title} desc={el.desc} />
                 ))}
-
+            </div>
+            <div className="container">
                 <Notify />
             </div>
         </MainLayout>

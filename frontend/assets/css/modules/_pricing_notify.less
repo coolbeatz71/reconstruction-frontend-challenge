@@ -3,12 +3,12 @@
     justify-content: space-between;
     align-items: center;
     background: @white !important;
-    padding: 3rem;
-    width: 600px;
+    padding: 2.5rem;
+    width: 60%;
     box-shadow: 0px 4px 44px rgba(249, 214, 224, 0.3);
     border-radius: 10px;
     margin: auto;
-    margin-bottom: 18rem;
+    margin-bottom: 15rem;
 
     .ant-typography {
         color: @primary;
@@ -16,7 +16,25 @@
     }
 
     button {
+        padding: 1.5rem;
         color: @primary !important;
         background: rgba(@primary, 15%) !important;
+    }
+
+    @media only screen and (max-width: 992px) {
+        width: 80%;
+        margin-bottom: 8rem;
+    }
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        flex-flow: column;
+        .ant-typography {
+            text-align: center;
+        }
+
+        button {
+            margin-top: 2rem;
+        }
     }
 }

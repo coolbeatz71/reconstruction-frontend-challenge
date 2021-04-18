@@ -7,8 +7,8 @@ const { Title, Paragraph } = Typography;
 const TopSection: FC<{}> = () => {
     return (
         <div className="topSection__wrapper">
-            <Row>
-                <Col span={12} className="topSection__wrapper__left">
+            <Row data-row>
+                <Col md={24} lg={12} xl={12} xxl={12} className="topSection__wrapper__left">
                     <Title level={2}>For Shorties</Title>
                     <p>5-10 years old</p>
                     <Link href="/courses">
@@ -18,7 +18,7 @@ const TopSection: FC<{}> = () => {
                         </button>
                     </Link>
                 </Col>
-                <Col span={12}>
+                <Col data-img md={24} lg={12} xl={12} xxl={12}>
                     <img src="pricing-bulb.svg" alt="pricing bulb" />
                 </Col>
             </Row>
